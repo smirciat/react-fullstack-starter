@@ -53,7 +53,7 @@ class App extends React.Component {
                   <div className="content-container flex-column">
                     <Switch>
                       <Route path="/admin" component={AdminPage} />
-                      <PrivateRoute path="/settings" component={SettingsPage} isAuthorized={!needsAccount} redirectTo="/account/create" />
+                      <PrivateRoute path="/settings" component={SettingsPage} isAuthorized={!needsAccount} redirectTo="/customers" />
                       <PrivateRoute path="/" exact isAuthorized={false} redirectTo="/customers" />
                       <Route component={NotFoundPage} />
                     </Switch>

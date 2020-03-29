@@ -6,6 +6,7 @@
 // You will need to set these on the server you deploy to.
 
 module.exports = {
+  DATABASE_URL:'postgres://',
   DOMAIN: 'http://localhost:3000',
   DEPLOYMENT_NAME: 'development',
   SESSION_SECRET: 'dev-secret',
@@ -20,8 +21,8 @@ module.exports = {
   INTUIT_APP_ID: 'id',
   INTUIT_APP_SECRET: 'secret',
 
-  SENTRY_DSN_FRONTEND: 'dsn',
-  SENTRY_DSN_BACKEND: 'dsn',
+  SENTRY_DSN_FRONTEND: undefined,//'dsn',
+  SENTRY_DSN_BACKEND: undefined,//'dsn',
 
   SYSTEM_EMAIL_ADDRESS: 'noreply@domain.com',
   SYSTEM_EMAIL_NAME: 'No Reply',
