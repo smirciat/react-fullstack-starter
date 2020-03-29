@@ -90,11 +90,11 @@ export async function create(req, res, next) {
     user.set('email', email);
     user.set('name', name);
     user = await user.save();
-    await sendEmailVerification(user.get('_id'));
+    //await sendEmailVerification(user.get('_id'));
     const token = jwt.sign({ _id: user._id }, config.secrets.session, {
       expiresIn: 60 * 60 * 5
     });
-    await handlePostRegistrationExternalServices(user);
+    //await handlePostRegistrationExternalServices(user);
     return res.json({ token });
   } catch(e) {
     return next(e);

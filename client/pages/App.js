@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
+import MainPage from './Main/MainPage';
+import CustomerPage from './Customer/CustomerPage';
 import LoginPage from './Login/LoginPage';
+import LogoutPage from './Logout/LogoutPage';
 import SignupPage from './Signup/SignupPage';
 import EmailVerificationPage from './EmailVerification/EmailVerificationPage';
 import AdminPage from './Admin/AdminPage';
@@ -32,6 +35,9 @@ class App extends React.Component {
       ? <ErrorBoundary>
         <OverlayManager />
         <Switch>
+          <Route exact path="/main" component={MainPage} />
+          <Route exact path="/customers" component={CustomerPage} />
+          <Route exact path="/logout" component={LogoutPage} />
           <PrivateRoute path="/login" component={LoginPage} isAuthorized={!isAuthenticated} redirectTo="/"/>
           <PrivateRoute path="/signup" exact component={SignupPage} isAuthorized={!isAuthenticated} redirectTo="/"/>
           <PrivateRoute path="/signup/verify" exact component={EmailVerificationPage} isAuthorized={!isAuthenticated} redirectTo="/"/>

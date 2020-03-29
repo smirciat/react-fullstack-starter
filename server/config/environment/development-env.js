@@ -1,5 +1,6 @@
 /*eslint no-process-env:0*/
 
+import locals from '../local.env.js';
 // Development specific configuration
 // ==================================
 module.exports = {
@@ -9,7 +10,7 @@ module.exports = {
   forceHttps: false,
   // Postgres connection options
   sequelize: {
-    uri: process.env.DATABASE_URL || 'postgres://',
+    uri: process.env.DATABASE_URL || locals.DATABASE_URL || 'postgres://',
     dialect: 'postgres',
     logging: false,
     storage: 'dev.postgres',
@@ -18,6 +19,6 @@ module.exports = {
     }
   },
   // Seed database on startup
-  seedDB: true
+  seedDB: false
 
 };

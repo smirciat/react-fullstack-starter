@@ -1,3 +1,15 @@
+# Smirciat Fork
+
+1.  Runs out of the box in my development environment.
+2.  Use `npm start` to run from /dist after `npm install`, use `node server` to run without building first.
+3.  Commented out some sections that prevented app start without configuration.  Still available to add later after config.
+  a.  emailer disabled
+  b.  mixpanel disabled
+  c.  sentry disabled
+4.  Run from dist uses dev parameters and local.env variables.  If variables are already present, local are ignored.
+5.  Empty /main template in pages to use own formatting.
+6.  Logout available in client from /logout.
+
 # React Fullstack Starter Web App
 
 1. **One command to get started** - Type `npm start` to start development in your default browser.

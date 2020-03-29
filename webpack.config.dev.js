@@ -49,8 +49,8 @@ export default {
       sentryConfigUrl: process.env.SENTRY_DSN_FRONTEND || '',
       deploymentName: 'development',
       googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-      googleAdsId: process.env.GOOGLE_ADS_ID,
-      mixpanelId: process.env.MIXPANEL_ID
+      googleAdsId: process.env.GOOGLE_ADS_ID//,
+      //mixpanelId: process.env.MIXPANEL_ID
     })
   ],
   module: {

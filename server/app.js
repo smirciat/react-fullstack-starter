@@ -22,6 +22,7 @@ require('./config/socketio').default(socketio);
 require('./config/express').default(app);
 require('./routes').default(app);
 errorHandler(app);
+
 require('./config/aws');
 
 // Start server

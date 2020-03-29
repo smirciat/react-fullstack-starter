@@ -126,7 +126,15 @@ export default function(app) {
     const webpackHotMiddleware = require('webpack-hot-middleware');
     const stripAnsi = require('strip-ansi');
     const webpack = require('webpack');
-    const webpackConfigDev = require('../../webpack.config.dev').default;
+    var webpackConfigDev;
+    try {
+      webpackConfigDev = require('../../../webpack.config.dev').default;//if running on dist
+    }
+    catch (err){
+      console.log(err);
+      console.log('No worries, trying another path...')
+      webpackConfigDev = require('../../webpack.config.dev').default;//if running on /
+    }
     const compiler = webpack(webpackConfigDev);
     const browserSync = require('browser-sync').create();
 
