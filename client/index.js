@@ -12,11 +12,11 @@ import 'react-datepicker/dist/react-datepicker.css';
 import {setAuthorizationHeader} from './utils/axiosConfig';
 import * as Sentry from '@sentry/browser';
 
-if(process.env.SENTRY_DSN_FRONTEND) {
-  Sentry.init({
-    dsn: process.env.SENTRY_DSN_FRONTEND,
-    environment: process.env.DEPLOYMENT_NAME
-  });
+if (process.env.SENTRY_DSN_FRONTEND) {
+  //Sentry.init({
+  //  dsn: process.env.SENTRY_DSN_FRONTEND,
+  //  environment: process.env.DEPLOYMENT_NAME
+  //});
 }
 
 const store = configureStore();

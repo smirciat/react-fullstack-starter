@@ -21,7 +21,7 @@ class SettingsMenu extends React.Component {
         <Dropdown>
           <DropdownTrigger>
             <div className="navbar__settings-menu__trigger">
-              <FontAwesomeIcon className="navbar__settings-menu__trigger__icon" icon='cog' />
+              <FontAwesomeIcon className="navbar__settings-menu__trigger__icon" icon={['fas', 'caret-down']} />
             </div>
           </DropdownTrigger>
           <DropdownContent>
