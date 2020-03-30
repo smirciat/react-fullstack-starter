@@ -53,10 +53,13 @@ export default function(app) {
   }
 
   if(env === 'production') {
-    app.use(favicon(path.join(config.root, 'client', 'favicon.ico')));
+    app.use(favicon(path.join(path.dirname(config.root), 'client', 'favicon.ico')));
+    app.set('appPath', path.join(path.dirname(config.root), 'client'));
+  }
+  else {
+    app.set('appPath', path.join(config.root, 'client'));
   }
 
-  app.set('appPath', path.join(config.root, 'client'));
   app.use(express.static(app.get('appPath')));
   app.use(morgan('dev'));
 
@@ -128,7 +131,8 @@ export default function(app) {
     const webpack = require('webpack');
     var webpackConfigDev;
     try {
-      webpackConfigDev = require('../../../webpack.config.dev').default;//if running on dist
+      var configPath=path.join(path.dirname(config.root)) + '/webpack.config.dev';
+      webpackConfigDev = require(configPath).default;//if running on dist
     }
     catch (err){
       console.log(err);
