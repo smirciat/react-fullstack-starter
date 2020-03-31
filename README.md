@@ -6,9 +6,8 @@
   a.  emailer disabled
   b.  mixpanel disabled
   c.  sentry disabled
-4.  Run from dist uses dev parameters and local.env variables.  If variables are already present, local are ignored.
-5.  Empty /main template in pages to use own formatting.
-6.  Logout available in client from /logout.
+4.  Empty /main template in pages to use own formatting.
+5.  Logout available in client from /logout.
 
 # React Fullstack Starter Web App
 

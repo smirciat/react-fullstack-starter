@@ -191,6 +191,8 @@ export default function(app) {
       browserSync.reload();
     });
   }
+  
+  sequelize.sync();
 
   if(env === 'development' || env === 'test') {
     app.use(errorHandler()); // Error handler - has to be last
