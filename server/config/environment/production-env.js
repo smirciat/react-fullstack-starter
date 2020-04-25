@@ -31,7 +31,7 @@ module.exports = {
 
   // Postgres connection options
   sequelize: {
-    uri: process.env.DATABASE_URL || 'postgres://',
+    uri: process.env.DATABASE_URL || 'postgres://postgres:c0dybond@localhost:5432/beringres',
     dialect: 'postgres',
     logging: false,
     storage: 'dist.postgres',
