@@ -15,7 +15,7 @@ module.exports = {
     || process.env.PORT
     || 8080,
 
-  forceHttps: process.env.FORCE_HTTPS !== 'false',
+  forceHttps: process.env.FORCE_HTTPS,
 
   // MongoDB connection options
   mongo: {

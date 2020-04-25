@@ -60,6 +60,7 @@ export default function(app) {
     app.set('appPath', path.join(config.root, 'client'));
   }
 
+  app.set('appPath', path.join(config.root, 'client'));
   app.use(express.static(app.get('appPath')));
   app.use(morgan('dev'));
 
